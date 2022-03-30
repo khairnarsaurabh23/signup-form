@@ -8,27 +8,31 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
-  <body class="bg-dark">
+  <body class="">
     <div class="container mt-4 bg-dark justify-cneter">
       <div class="card bg-white col-6">
         <div class="card-body ">
           <h2>Signup-form</h2>
-          <form action="create" method="POST">
+          <form action="/create" method="POST">
             <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" class="form-control col-6 text-success" id="f_name" placeholder="Enter first name" name="f_name">
+              <label for="rm_code">RM Code</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_code" placeholder="Enter RM Code" name="rm_code" required>
             </div>
             <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" class="form-control col-6 text-success" id="l_name"  placeholder="Enter last name" name="l_name">
+              <label for="rm_name">RM Name</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_name"  placeholder="Enter RM Name" name="rm_name" required>
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="text" class="form-control col-6 text-success" id="exampleInputEmail1"  name="email" placeholder="Enter email">
+              <label for="rm_type">RM Type</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_type"  name="rm_type" placeholder="Enter RM Type" required>
             </div>        
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" class="form-control col-6">
+              <label for="description">Description</label>
+              <input type="text" id="description"  name="description" class="form-control col-6"  placeholder="Enter Description" required>
+            </div>
+            <div class="form-group">
+              <label for="department_id">Department Id</label>
+              <input type="text" id="department_id" class="form-control col-6" placeholder="Enter Department ID" required>
             </div>
             <button type="submit" class="btn btn-primary align-center">Submit</button>
           </form>

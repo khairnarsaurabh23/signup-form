@@ -3,7 +3,7 @@ var conn = mysql.createConnection({
   host: 'localhost', 
   user: 'embedsol',
   password: 'embedsol',
-  database: 'signupform'
+  database: 'embedsol'
 }); 
 conn.connect(function(err) {
   if (err) throw err;
