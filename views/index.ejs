@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../public/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body  class="font-mono bg-gray-400">
+    <!-- Container -->
+    <div class="container mx-auto">
+      <div class="flex justify-center px-6 my-12">
+        <!-- Row -->
+        <!-- <div style="max-height: 90vh;" class="w-full xl:w-3/4 lg:w-11/12 flex">
+          <div
+            class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg custom-img"
+            style="background-image:'https://www.freepik.com/free-vector/forms-concept-illustration_12219240.htm#query=form&position=3&from_view=search'"
+          >
+        </div> -->
+          <!-- Col -->
+          <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+            <div class="">
+              <button  type="button"
+                       style=" float: right;"><a href="/home">❌</a></button>
+            </div>
+            <h3 class="pt-4 text-2xl font-bold text-center">Enter the details</h3>
+            <form style="margin-bottom: 0px;" class="px-8 pt-6 pb-8 mb-4 bg-white rounded" action="/create" method="post">
+              <div class="mb-4 md:flex md:justify-between">
+                <label class="block mb-2 text-sm font-bold text-gray-700 pr-16" for="rm_code">
+                  RM_Code
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 input-text"
+                  id="rm_code"
+                  name="rm_code"
+                  type="text"
+                  placeholder="Enter RM code"
+                  required
+                />
+              </div>
+              <div class="mb-4 md:flex md:justify-between">
+                <label class="block mb-2 text-sm font-bold text-gray-700 pr-16" for="rm_name">
+                  RM_Name
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 input-text"
+                  id="rm_name"
+                  name="rm_name"
+                  type="text"
+                  placeholder="Enter RM name"
+                  required
+                />
+              </div>
+              <div class="mb-4 md:flex md:justify-between">
+                <label class="block mb-2 text-sm font-bold text-gray-700 pr-16" for="rm_type">
+                  RM_Type
+                </label>
+                <input
+                  class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 input-text"
+                  id="rm_type"
+                  name="rm_type"
+                  type="text"
+                  placeholder="Enter RM type"
+                  required
+                />
+              </div>
+              <div class="mb-4 md:flex md:justify-between">
+                <label class="block mb-2 text-sm font-bold text-gray-700 pr-8" for="description">
+                  Description
+                </label>
+                <input
+                  class="w-full  px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 input-text"
+                  id="description"
+                  name="description"
+                  type="textarea"
+                  placeholder="Description"
+                  required
+                />
+              </div>
+              <div class="mb-4 md:flex md:justify-between">
+                <label class="block mb-2 text-sm font-bold text-gray-700 pr-8" for="department_id">
+                  Department_ID
+                </label>
+                <input
+                  class="w-full px-6 py-2 mb-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+                  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 input-text"
+                  id="department_id"
+                  name="department_id"
+                  type="text"
+                  placeholder="Enter RM type"
+                  required
+                />
+              </div>
+
+            <div class="mb-4 md:flex md:justify-between">    
+              <div class="mb-6 text-center">
+                  <button
+                    class="w-full px-4 py-2 font-bold text-white bg-pink-500 rounded-full hover:bg-blue-500 focus:outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+                <div class="text-center">
+                  <button
+                    class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-pink-500 focus:outline-none focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    onclick="reset()"
+                    value="reset"
+                  >
+                    Reset Form
+                  </button>
+                </div>
+              </div>
+            </form>
+            <script>
+                function reset(){
+                  console.log('Form data has been reset');
+                  document.getElementsByClassName('input-text').reset();
+                };
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <body class="">
+    <div class="container mt-4 bg-dark justify-cneter">
+      <div class="card bg-white col-6">
+        <div class="card-body ">
+          <h2>Signup-form</h2>
+          <form action="/create" method="POST">
+            <div class="form-group">
+              <label for="rm_code">RM Code</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_code" placeholder="Enter RM Code" name="rm_code" required>
+            </div>
+            <div class="form-group">
+              <label for="rm_name">RM Name</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_name"  placeholder="Enter RM Name" name="rm_name" required>
+            </div>
+            <div class="form-group">
+              <label for="rm_type">RM Type</label>
+              <input type="text" class="form-control col-6 text-success" id="rm_type"  name="rm_type" placeholder="Enter RM Type" required>
+            </div>        
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" id="description"  name="description" class="form-control col-6"  placeholder="Enter Description" required>
+            </div>
+            <div class="form-group">
+              <label for="department_id">Department Id</label>
+              <input type="text" id="department_id" name="department_id" class="form-control col-6" placeholder="Enter Department ID" required>
+            </div>
+            <button type="submit" class="btn btn-primary align-center">Submit</button>
+          </form>
+    </div>
+  </div>
+  </body> -->
+</html>
+
+
+
+
+
+
+
+<!-- 
+<div class="mb-4 md:flex md:justify-between">
+  <div class="mb-4 md:mr-2 md:mb-0">
+    <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+      Password
+    </label>
+    <input
+      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+      id="password"
+      type="password"
+      placeholder="******************"
+    />
+    <p class="text-xs italic text-red-500">Please choose a password.</p>
+  </div>
+  <div class="md:ml-2">
+    <label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
+      Confirm Password
+    </label>
+    <input
+      class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+      id="c_password"
+      type="password"
+      placeholder="******************"
+    />
+  </div>
+</div> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body class="bg-dark">
+    <div class="container mt-4 bg-dark justify-cneter">
+      <div class="card bg-white col-6">
+        <div class="card-body ">
+          <h2>Signup-form</h2>
+          <form action="/create" method="POST">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control col-6 text-success" id="f_name" placeholder="Enter first name" name="f_name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control col-6 text-success" id="l_name"  placeholder="Enter last name" name="l_name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="text" class="form-control col-6 text-success" id="exampleInputEmail1"  name="email" placeholder="Enter email">
+            </div>        
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control col-6">
+            </div>
+            <button type="submit" class="btn btn-primary align-center">Submit</button>
+          </form>
+    </div>
+  </div>
+  </body>
+</html> -->
