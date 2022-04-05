@@ -1,4 +1,11 @@
 var mysql = require('mysql');
+const winston = require('winston');
+
+const logger = winston.createLogger({
+  transports: [
+      new winston.transports.Console()
+  ]
+});
 var conn = mysql.createConnection({
   host: 'localhost', 
   user: 'embedsol',
@@ -7,6 +14,7 @@ var conn = mysql.createConnection({
 }); 
 conn.connect(function(err) {
   if (err) throw err;
-  console.log('Database is connected successfully !');
+  //console.log('');
+  logger.info('Database is connected successfully !')
 });
 module.exports = conn;
