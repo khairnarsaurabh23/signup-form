@@ -1,13 +1,12 @@
+//route file to render rm list form
+
 var express = require('express');
 const res = require('express/lib/response');
 var router = express.Router();
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'creat' });
-// });
+
 router.route('/').get( function(req, res, next) {
-  res.render('index', { title: 'create' });
+  res.render('rmList', { title: 'create' });
 
 });
 

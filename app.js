@@ -6,9 +6,11 @@ var cookieParser = require('cookie-parser');
 
 //var db = require('./database');
 
-var indexRouter = require('./routes/index');
+var rmListRouter = require('./routes/rmList');
 var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
+var partRouter = require('./routes/partForm.js');
+var partPostRouter = require('./routes/partPost');
 
 var app = express();
 
@@ -23,8 +25,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
-app.use('/', indexRouter);
+app.use('/', rmListRouter);
 app.use('/', usersRouter);
+app.use('/', partRouter);
+app.use('/', partPostRouter);
+
 
 
 // catch 404 and forward to error handler
@@ -43,7 +48,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, function () {
+app.listen(8800, function () {
   console.log('Node app is running on port 3000');
 })
 
