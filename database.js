@@ -8,9 +8,9 @@ const logger = winston.createLogger({
 });
 var conn = mysql.createConnection({
   host: 'localhost', 
-  user: 'embedsol',
-  password: 'embedsol',
-  database: 'embedsol'
+  user: 'root',
+  password: 'your passwd',
+  database: 'your database'
 }); 
 conn.connect(function(err) {
   if (err) throw err;
